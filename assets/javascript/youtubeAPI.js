@@ -54,7 +54,7 @@ $(document).ready(function() {
 
   //   When we've clicked the submit button
   $("#searchButton").on("click", function() {
-    console.log("click");
+    console.log("Called YouTube API");
 
     // Ensure that we have valid data. This will likely change as we move along. The "titleFromOMDB" variable may just be a simple error variable.
     if (title != "" && titleFromOMDB != undefined) {

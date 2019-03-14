@@ -57,5 +57,6 @@ $(document).ready(function() {
   }
   $("#searchButton").on("click", function() {
     callAPIforNYT();
+    console.log("called NYT API");
   });
 });
