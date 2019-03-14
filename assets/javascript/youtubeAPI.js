@@ -13,7 +13,7 @@ $(document).ready(function() {
   //    after the API code downloads.
   var player;
   function onYouTubeIframeAPIReady(query) {
-    player = new YT.Player("trailer", {
+    player = new YT.Player("MovieTrailer", {
       height: "390",
       width: "640",
       videoId: query,
