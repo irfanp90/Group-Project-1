@@ -1,70 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script
-      src="http://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <title>Rate Movies!</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <body>
-    <section class="container">
-      <h1>Welcome!</h1>
-      <div class="row">
-        <div class=" col l6 s12">
-          <label for="movie search" class="label">Search a Movie</label>
-          <input id="searchText" type="text" />
-        </div>
-        <div class="col l6 s12">
-          <button
-            class="waves-effect waves-light btn"
-            id="searchButton"
-            type="submit"
-          >
-            Submit
-          </button>
-        </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <title>Rate Movies!</title>
+</head>
+
+<body>
+  <section class="container">
+    <h1>Welcome!</h1>
+    <div class="row">
+      <div class=" col l6 s12">
+        <label for="movie search" class="label">Search a Movie</label>
+        <input id="searchText" type="text" />
       </div>
-      <div class="row">
-        <div class="col l3 s12">
+      <div class="col l6 s12">
+        <button class="waves-effect waves-light btn" id="searchButton" type="submit">
+          Submit
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <div class="col l3 s12">
           <div id="movieRating">
             <h4 id="movieQuestion">Would you go see it?</h4>
           </div>
-        </div>
-        <div class="col l5 s12">
-          <div id="movieTrailer">
-            Movie Trailer
-          </div>
-        </div>
-        <div class="col l4 s12">
-          <div id="movieInfo">
-            Movie Title
-          </div>
+        </div> -->
+      <div class="col l6 s12">
+        <div id="movieTrailer">
+          Movie Trailer
         </div>
       </div>
-      <div class="row">
-        <div class="col s12">
-          <div id="movieNYReview">
-            New York Times Review
-          </div>
+      <div class="col l6 s12">
+        <div id="movieInfo">
+          Movie Title
         </div>
       </div>
-    </section>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <div id="movieNYReview">
+          New York Times Review
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="./assets/javascript/youtubeAPI.js"></script>
-  </body>
+  <script src="./assets/javascript/youtubeAPI.js"></script>
+</body>
+
 </html>
