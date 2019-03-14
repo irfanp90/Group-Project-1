@@ -53,7 +53,7 @@ $(document).ready(function() {
   var titleFromOMDB = "The Matrix";
 
   //   When we've clicked the submit button
-  $("#submitButton").on("click", function() {
+  $("#searchButton").on("click", function() {
     console.log("click");
 
     // Ensure that we have valid data. This will likely change as we move along. The "titleFromOMDB" variable may just be a simple error variable.

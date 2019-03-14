@@ -55,7 +55,7 @@ $(document).ready(function() {
       $("#movieNYReview").append(newAnchor);
     });
   }
-  $("#submitButton").on("click", function() {
+  $("#searchButton").on("click", function() {
     callAPIforNYT();
   });
 });
