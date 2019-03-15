@@ -1,4 +1,5 @@
 function movieData() {
+  console.log("in OMDB!");
   var movie = "Jaws";
   var queryURL =
     "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
@@ -38,4 +39,4 @@ function movieData() {
     $("#movieINFO").append(pOne, pTwo, pThree, pFour, pFive, pSix);
   });
 }
-$("#submitButton").on("click", movieData);
+// $("#submitButton").on("click", movieData);
