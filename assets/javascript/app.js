@@ -26,7 +26,7 @@ function addUpFunction(){
     likes: thumbsUpCounter,dislike: thumbsDownCounter
     });
     database.ref().on("value", function(snapshot){
-        likes = snapshot.val().likes;
+        thumbsUpCounter = snapshot.val().likes;
         $("#thumbsupcount").text(snapshot.val().likes);
     });
 }
@@ -39,7 +39,7 @@ function addDownFunction(){
         likes: thumbsUpCounter,dislike: thumbsDownCounter
     });
     database.ref().on("value", function(snapshot){
-        dislike = snapshot.val().dislike;
+        thumbsDownCounter = snapshot.val().dislike;
         $("#thumbsdowncount").text(snapshot.val().dislike);
     });
 };
