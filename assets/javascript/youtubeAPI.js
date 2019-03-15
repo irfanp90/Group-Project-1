@@ -13,7 +13,7 @@ $(document).ready(function() {
   //    after the API code downloads.
   var player;
   function onYouTubeIframeAPIReady(query) {
-    player = new YT.Player("MovieTrailer", {
+    player = new YT.Player("movieTrailer", {
       height: "390",
       width: "640",
       videoId: query,
@@ -50,11 +50,11 @@ $(document).ready(function() {
   // Dummy title declarations. In reality, this title variable will be a global variable from Irfan's call to the OMDB API.
   // This variable must be removed when the code is ready to integrate.
   var title = "The Matrix";
-  var titleFromOMDB = "a series of unfortunate events";
+  var titleFromOMDB = "The Matrix";
 
   //   When we've clicked the submit button
-  $("#submitButton").on("click", function() {
-    console.log("click");
+  $("#searchButton").on("click", function() {
+    console.log("Called YouTube API");
 
     // Ensure that we have valid data. This will likely change as we move along. The "titleFromOMDB" variable may just be a simple error variable.
     if (title != "" && titleFromOMDB != undefined) {
