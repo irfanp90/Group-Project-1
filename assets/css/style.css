@@ -4,7 +4,6 @@ h1 {
 
 label {
     font-size: 1.25rem;
-<<<<<<< HEAD
     color: #0e0d09;
 }
 
@@ -38,18 +37,23 @@ section:last-child {
 #movieNYReview p {
     color: #0e0d09;
 }
-=======
+
+#recommend {
+    font-weight: bold;
+    margin: 10px;
 }
-#recommend{
-    font-weight: bold; margin:10px;
+
+#movieQuestion {
+    border: solid;
+    border-width: 2px;
+    width: 60px;
+    align-content: center;
+    margin: 10px;
+    float: left;
 }
-#movieQuestion{
-    border: solid; border-width: 2px;
-    width: 60px; align-content: center;
-    margin: 10px; float: left;
-  }
-  .rate{
-    width: 50px; height: 50px;
+
+.rate {
+    width: 50px;
+    height: 50px;
     padding: 10px;
-  }
->>>>>>> master
+}
