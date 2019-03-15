@@ -35,7 +35,7 @@ function movieData() {
     var pFive = $("<div id='movieActors'>").text(" Actors: " + response.Actors);
     var pSix = $("<div id='moviePlot>").text(" Plot: " + response.Plot);
 
-    $("#movieINFO").append(pOne, pTwo, pThree, pFour, pFive, pSix);
+    $("#movieInfo").append(pOne, pTwo, pThree, pFour, pFive, pSix);
   });
 }
-$("#submitButton").on("click", movieData);
+$("#searchButton").on("click", movieData);
