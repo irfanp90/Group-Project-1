@@ -36,17 +36,10 @@ function movieData(movie) {
     var pFive = $("<div id='movieActors'>").text(" Actors: " + response.Actors);
     var pSix = $("<div id='moviePlot>").text(" Plot: " + response.Plot);
 
-<<<<<<< HEAD
-=======
     $("#movieInfo").empty();
->>>>>>> master
     $("#movieInfo").append(pOne, pTwo, pThree, pFour, pFive, pSix);
     getTrailer(response.Title);
     getNYT(response.Title, response.Released);
   });
 }
-<<<<<<< HEAD
-$("#submitButton").on("click", movieData);
-=======
 // $("#submitButton").on("click", movieData);
->>>>>>> master
