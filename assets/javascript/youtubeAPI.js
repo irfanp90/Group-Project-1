@@ -1,5 +1,5 @@
 // Ensure that our HTML is all loaded before we worry about looking up anything on YouTube.
-$(document).ready(function() {
+$(document).ready(function () {
   // Stuff taken from https://developers.google.com/youtube/iframe_api_reference
 
   // 2. This code loads the IFrame Player API code asynchronously.
@@ -12,6 +12,7 @@ $(document).ready(function() {
   // 3. This function creates an <iframe> (and YouTube player)
   //    after the API code downloads.
   var player;
+
   function onYouTubeIframeAPIReady(query) {
     player = new YT.Player("MovieTrailer", {
       height: "390",
@@ -33,12 +34,14 @@ $(document).ready(function() {
   //    The function indicates that when playing a video (state=1),
   //    the player should play for six seconds and then stop.
   var done = false;
+
   function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
       setTimeout(stopVideo, 6000);
       done = true;
     }
   }
+
   function stopVideo() {
     player.stopVideo();
   }
@@ -53,7 +56,7 @@ $(document).ready(function() {
   var titleFromOMDB = "a series of unfortunate events";
 
   //   When we've clicked the submit button
-  $("#submitButton").on("click", function() {
+  $("#searchButton").on("click", function () {
     console.log("click");
 
     // Ensure that we have valid data. This will likely change as we move along. The "titleFromOMDB" variable may just be a simple error variable.
@@ -70,7 +73,7 @@ $(document).ready(function() {
       $.ajax({
         url: queryURL,
         method: "GET"
-      }).then(function(response) {
+      }).then(function (response) {
         console.log(response.items[0].id.videoId);
 
         onYouTubeIframeAPIReady(response.items[0].id.videoId);
