@@ -1,5 +1,6 @@
-function movieData() {
-  var movie = "Jaws";
+function movieData(movie) {
+  console.log("in OMDB!");
+  // var movie = "Jaws";
   var queryURL =
     "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
 
@@ -35,14 +36,10 @@ function movieData() {
     var pFive = $("<div id='movieActors'>").text(" Actors: " + response.Actors);
     var pSix = $("<div id='moviePlot>").text(" Plot: " + response.Plot);
 
-<<<<<<< HEAD
-    $("#movieINFO").append(pOne, pTwo, pThree, pFour, pFive, pSix);
-  });
-}
-$("#submitButton").on("click", movieData);
-=======
+    $("#movieInfo").empty();
     $("#movieInfo").append(pOne, pTwo, pThree, pFour, pFive, pSix);
+    getTrailer(response.Title);
+    getNYT(response.Title, response.Released);
   });
 }
-$("#searchButton").on("click", movieData);
->>>>>>> master
+// $("#submitButton").on("click", movieData);

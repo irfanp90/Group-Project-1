@@ -45,7 +45,8 @@ $(document).ready(function() {
         return false;
       }
     }
-    console.log("submitting for URLQuery: ", searchInput); //   fetchQueryURL(searchInput);
+    console.log("submitting for URLQuery: ", searchInput); //   fetchQueryURL(search);
+    movieData(searchInput);
     return searchInput;
   }
 });
