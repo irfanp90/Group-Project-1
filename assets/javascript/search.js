@@ -22,7 +22,7 @@ $(document).ready(function() {
   //Trigger search button click event by hitting enter key
   $("#searchText").keypress(function(enter) {
     if (enter.which == 13) {
-      $("#submitButton").click();
+      $("#searchButton").click();
     }
   });
 
@@ -34,13 +34,14 @@ $(document).ready(function() {
       .val()
       .trim();
 
+    if (searchInput == "") {
+      alert("Please enter a Movie Title"); // alert to be changed to modal
+      //   $(".modal").modal("Please enter a Movie Search");
+      return false;
+    }
     for (var i = 0; i < searchInput.length; i++) {
       if (specialCharacters.indexOf(searchInput.charAt(i)) != -1) {
         alert("Please enter a Movie Title with no special characters"); // alert to be changed to modal
-        return false;
-      } else if (searchInput == "") {
-        alert("Please enter a Movie Title"); // alert to be changed to modal
-        //   $(".modal").modal("Please enter a Movie Search");
         return false;
       }
     }
