@@ -32,10 +32,11 @@ function movieData() {
       " Released: " + response.Released
     );
     var pFour = $("<img id='moviePoster'>").attr("src", response.Poster);
+    $('#moviePoster').append(pFour);
     var pFive = $("<div id='movieActors'>").text(" Actors: " + response.Actors);
     var pSix = $("<div id='moviePlot>").text(" Plot: " + response.Plot);
 
-    $("#movieInfo").append(pOne, pTwo, pThree, pFour, pFive, pSix);
+    $("#movieInfo").append(pOne, pTwo, pThree, pFive, pSix);
   });
 }
 $("#searchButton").on("click", movieData);
