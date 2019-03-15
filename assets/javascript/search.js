@@ -45,7 +45,7 @@ $(document).ready(function() {
         return false;
       }
     }
-    console.log("submitting for URLQuery: ", searchInput); //   fetchQueryURL(search);
+    console.log("submitting for URLQuery: ", searchInput); //   fetchQueryURL(searchInput);
     return searchInput;
   }
 });
