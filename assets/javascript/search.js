@@ -46,7 +46,7 @@ $(document).ready(function() {
       }
     }
     console.log("submitting for URLQuery: ", searchInput); //   fetchQueryURL(search);
-    movieData();
+    movieData(searchInput);
     return searchInput;
   }
 });
