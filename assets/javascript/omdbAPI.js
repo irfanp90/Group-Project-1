@@ -1,13 +1,14 @@
 function movieData(movie) {
   console.log("in OMDB!");
   // var movie = "Jaws";
+  $("#movieInfo").empty();
   var queryURL =
     "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
 
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function(response) {
+  }).then(function (response) {
     console.log(response);
     var pOne = $("<div>");
     pOne.attr("id", "movieTitle");
@@ -33,13 +34,19 @@ function movieData(movie) {
       " Released: " + response.Released
     );
     var pFour = $("<img id='moviePoster'>").attr("src", response.Poster);
+    $('#moviePoster').empty();
+    $('#moviePoster').append(pFour);
     var pFive = $("<div id='movieActors'>").text(" Actors: " + response.Actors);
     var pSix = $("<div id='moviePlot>").text(" Plot: " + response.Plot);
 
-    $("#movieInfo").empty();
-    $("#movieInfo").append(pOne, pTwo, pThree, pFour, pFive, pSix);
-    getTrailer(response.Title);
-    getNYT(response.Title, response.Released);
+    $("#movieInfo").append(pOne, pTwo, pThree, pFive, pSix);
   });
-}
+};
+
+$("#searchButton").on("click", movieData);
+$("#movieInfo").empty();
+$("#movieInfo").append(pOne, pTwo, pThree, pFive, pSix);
+getTrailer(response.Title);
+getNYT(response.Title, response.Released);
+
 // $("#submitButton").on("click", movieData);
