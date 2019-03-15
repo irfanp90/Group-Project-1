@@ -1,86 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script
-      src="http://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script src="./assets/javascript/app.js"></script>  -->
 
-    <title>Rate Movies!</title>
-  </head>
+  <title>Rate Movies!</title>
+</head>
 
-  <body>
-    <section class="container">
-      <h1>Welcome!</h1>
-      <div class="row">
-        <div class=" col l6 s12">
-          <label for="movie search" class="label">Search a Movie</label>
-          <input id="searchText" type="text" />
-        </div>
-        <div class="col l6 s12">
-          <button
-            class="waves-effect waves-light btn"
-            id="searchButton"
-            type="submit"
-          >
-            Submit
-          </button>
-        </div>
+<body>
+  <section class="container">
+    <h1>Welcome!</h1>
+    <div class="row">
+      <div class=" col l6 s12">
+        <label for="movie search" class="label">Search a Movie</label>
+        <input id="searchText" type="text" />
       </div>
-      <div id="MovieTrailer"></div>
-    <div id="recommend">
-        <p>Would you recommend this Movie?</p>
-    <div id="movieQuestion">
-      <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-        <img class="rate" id="good" src="./assets/Images/good.png" alt="good">
-        <p id="thumbsupcount"></p>
-        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-      <img class="rate" id="bad" src="./assets/Images/bad.png"  alt="bad">
-      <p id="thumbsdowncount"></p>
-  </div>
-  </div>
-      <div class="row">
-        <div class="col l6 s12">
-          <div id="movieTrailer">
-            Movie Trailer
-          </div>
-        </div>
-        <div class="col l6 s12">
-          <div id="movieInfo">
-            <!-- Movie Title -->
+      <div class="col l6 s12">
+        <button class="waves-effect waves-light btn" id="searchButton" type="submit">
+          Submit
+        </button>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <br>
+  <section class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <div id="recommend">
+          <p>Would you recommend this Movie?</p>
+          <div id="movieQuestion">
+            <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+            <img class="rate" id="good" src="./assets/Images/good.png" alt="good">
+            <p id="thumbsupcount"></p>
+            <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+            <img class="rate" id="bad" src="./assets/Images/bad.png" alt="bad">
+            <p id="thumbsdowncount"></p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col s12">
-          <div id="movieNYReview">
-            New York Times Review
-          </div>
+    </div>
+  </section>
+  <br>
+  <section class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <div id="movieTrailer">
+          Movie Trailer
         </div>
       </div>
-    </section>
-    
-    <script src="./assets/javascript/youtubeAPI.js"></script>
-    <script src="./assets/javascript/search.js"></script>
-    <script src="./assets/javascript/NYT.js"></script>
-    <Script src="./assets/javascript/omdbAPI.js"></Script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <script src="./assets/javascript/app.js"></script> 
+      <div class="col l6 s12">
+        <div id="movieInfo">
+          Movie Title </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <br>
+  <section class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="movieNYReview">
+          New York Times Review
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </body>
+  <script src="./assets/javascript/youtubeAPI.js"></script>
+  <script src="./assets/javascript/search.js"></script>
+  <script src="./assets/javascript/NYT.js"></script>
+  <Script src="./assets/javascript/omdbAPI.js"></Script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src="./assets/javascript/app.js"></script>
+
+
+</body>
+
 </html>
