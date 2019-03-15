@@ -8,7 +8,7 @@ function movieData(movie) {
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function (response) {
+  }).then(function(response) {
     console.log(response);
     var pOne = $("<div>");
     pOne.attr("id", "movieTitle");
@@ -34,19 +34,20 @@ function movieData(movie) {
       " Released: " + response.Released
     );
     var pFour = $("<img id='moviePoster'>").attr("src", response.Poster);
-    $('#moviePoster').empty();
-    $('#moviePoster').append(pFour);
+    $("#moviePoster").empty();
+    $("#moviePoster").append(pFour);
     var pFive = $("<div id='movieActors'>").text(" Actors: " + response.Actors);
     var pSix = $("<div id='moviePlot>").text(" Plot: " + response.Plot);
 
     $("#movieInfo").append(pOne, pTwo, pThree, pFive, pSix);
+    console.log("Should now call youtube");
+    getTrailer(response.Title);
+    getNYT(response.Title, response.Released);
   });
-};
 
-$("#searchButton").on("click", movieData);
-$("#movieInfo").empty();
-$("#movieInfo").append(pOne, pTwo, pThree, pFive, pSix);
-getTrailer(response.Title);
-getNYT(response.Title, response.Released);
+  // $("#searchButton").on("click", movieData);
+  // $("#movieInfo").empty();
+  // $("#movieInfo").append(pOne, pTwo, pThree, pFive, pSix);
+}
 
 // $("#submitButton").on("click", movieData);
