@@ -16,7 +16,7 @@ $(document).ready(function () {
 
   function onYouTubeIframeAPIReady(query) {
     player = new YT.Player("movieTrailer", {
-      height: "auto",
+      height: "390",
       width: "100%",
       videoId: query,
       events: {
