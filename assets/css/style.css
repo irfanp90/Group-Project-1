@@ -25,6 +25,15 @@ section {
     border-radius: 9px;
 }
 
+.modal-close {
+    float: right;
+    font-size: 1.75rem;
+}
+
+.modal p {
+    font-size: 1.25rem;
+}
+
 section:first-child {
     margin-top: 4%;
 }
