@@ -35,7 +35,7 @@ function movieData(movie) {
       " Released: " + response.Released
     );
     var pFour = $("<img id='moviePoster'>").attr("src", response.Poster);
-    $("#moviePoster").empty();
+    //$("#moviePoster").empty();
     $("#moviePoster").append(pFour);
     var pFive = $("<div id='movieActors'>").text(" Actors: " + response.Actors);
     var pSix = $("<div id='moviePlot>").text(" Plot: " + response.Plot);
