@@ -15,12 +15,12 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 
 function onYouTubeIframeAPIReady(query) {
-  console.log("YouTube code executing");
-  console.log(query);
+  // console.log("YouTube code executing");
+  // console.log(query);
   if (query != undefined) {
     if ($("#player") != undefined) {
       $("#player").empty();
-      console.log("Tried to empty player");
+      // console.log("Tried to empty player");
     }
     player = new YT.Player("movieTrailer", {
       height: "390",
@@ -68,12 +68,12 @@ function getTrailer(titleFromOMDB) {
 
   //   When we've clicked the submit button
 
-  console.log("called YouTube API");
+  // console.log("called YouTube API");
 
   // Ensure that we have valid data. This will likely change as we move along. The
   // "titleFromOMDB" variable may just be a simple error variable.
   if (titleFromOMDB != undefined) {
-    console.log("valid title");
+    // console.log("valid title");
 
     // define our query url
     var queryURL =
@@ -83,7 +83,7 @@ function getTrailer(titleFromOMDB) {
       "AIzaSyAdbJz-qr5qNeHZKT9uV-ulkjw6J8WdppY";
 
     $.ajax({ url: queryURL, method: "GET" }).then(function(response) {
-      console.log(response.items[0].id.videoId);
+      // console.log(response.items[0].id.videoId);
       $("#movieTrailer").empty();
       onYouTubeIframeAPIReady(response.items[0].id.videoId);
     });
