@@ -1,3 +1,9 @@
+//hide the sections
+$('#section2').hide();
+$('#section3').hide();
+$('#section4').hide();
+$('#section5').hide();
+
 function movieData(movie) {
   console.log("in OMDB!");
   // var movie = "Jaws";
@@ -37,6 +43,9 @@ function movieData(movie) {
     var pFour = $("<img id='moviePoster'>").attr("src", response.Poster);
     //$("#moviePoster").empty();
     $("#moviePoster").append(pFour);
+    $('#background-poster').css({
+      'backgroundImage': `url(${response.Poster})`
+    });
     var pFive = $("<div id='movieActors'>").text(" Actors: " + response.Actors);
     var pSix = $("<div id='moviePlot>").text(" Plot: " + response.Plot);
 
@@ -49,6 +58,19 @@ function movieData(movie) {
   // $("#searchButton").on("click", movieData);
   // $("#movieInfo").empty();
   // $("#movieInfo").append(pOne, pTwo, pThree, pFive, pSix);
+  //make the sections show up once there's a match
+  $('#section2').show();
+  $('#section2').addClass('animated');
+  $('#section2').addClass('fadeInUp');
+  $('#section3').show();
+  $('#section3').addClass('animated');
+  $('#section3').addClass('fadeInUp');
+  $('#section4').show();
+  $('#section4').addClass('animated');
+  $('#section4').addClass('fadeInUp');
+  $('#section5').show();
+  $('#section5').addClass('animated');
+  $('#section5').addClass('fadeInUp');
 }
 
 // $("#submitButton").on("click", movieData);
