@@ -36,25 +36,28 @@ function getNYT(titleFromOMDB, movieReleaseDate) {
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function(response) {
+  }).then(function (response) {
     console.log(response.response.docs[0]);
     var articleURL = response.response.docs[0].web_url;
     var newAnchor = $("<a>");
     newAnchor.attr("href", articleURL);
     newAnchor.html(
       "<h3>" +
-        response.response.docs[0].headline.main +
-        "</h3>" +
-        "<br>" +
-        "<p>" +
-        response.response.docs[0].lead_paragraph +
-        "</p>"
+      response.response.docs[0].headline.main +
+      "</h3>" +
+      "<br>" +
+      "<p>" +
+      response.response.docs[0].lead_paragraph +
+      "</p>"
     );
     console.log(response.response.docs[0].headline.main);
     $("#movieNYReview").empty();
     $("#movieNYReview").append(newAnchor);
   });
+  $("#searchText").val(" ");
 }
+
+
 // $("#searchButton").on("click", function() {
 //   callAPIforNYT();
 //   console.log("called NYT API");
