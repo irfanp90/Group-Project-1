@@ -16,13 +16,14 @@ $(document).ready(function() {
     // call the validateSearch function
     validateSearch();
     // clear the#searchText field as no longer needed
-    $("#searchText").val("");
+    //$("#searchText").val(" ");
   });
 
   //Trigger search button click event by hitting enter key
   $("#searchText").keypress(function(enter) {
     if (enter.which == 13) {
-      $("#searchButton").click();
+      // $("#searchButton").click();
+      validateSearch();
     }
   });
 
@@ -34,14 +35,23 @@ $(document).ready(function() {
       .val()
       .trim();
 
-    if (searchInput == "") {
-      alert("Please enter a Movie Title"); // alert to be changed to modal
-      //   $(".modal").modal("Please enter a Movie Search");
+    $("#searchText").text("");
+
+    if (searchInput === "") {
+      //alert("Please enter a Movie Title"); // alert to be changed to modal
+      console.log("Search Input is " + searchInput);
+      $("#searchButton").attr("href", "#modal1");
+      $(".modal").modal();
+      $("#modal1").modal("open");
       return false;
     }
     for (var i = 0; i < searchInput.length; i++) {
-      if (specialCharacters.indexOf(searchInput.charAt(i)) != -1) {
-        alert("Please enter a Movie Title with no special characters"); // alert to be changed to modal
+      if (specialCharacters.indexOf(searchInput.charAt(i)) !== -1) {
+        //alert("Please enter a Movie Title with no special characters"); // alert to be changed to modal
+        console.log("This is working");
+        $("#searchButton").attr("href", "#modal2");
+        $(".modal").modal();
+        $("#modal2").modal("open");
         return false;
       }
     }
