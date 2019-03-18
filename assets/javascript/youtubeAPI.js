@@ -1,6 +1,6 @@
 // Ensure that our HTML is all loaded before we worry about looking up anything
 // on YouTube.
-$(document).ready(function() {
+$(document).ready(function () {
   // Stuff taken from https://developers.google.com/youtube/iframe_api_reference
 
   // 2. This code loads the IFrame Player API code asynchronously.
@@ -17,7 +17,7 @@ $(document).ready(function() {
   function onYouTubeIframeAPIReady(query) {
     player = new YT.Player("movieTrailer", {
       height: "390",
-      width: "640",
+      width: "100%",
       videoId: query,
       events: {
         onReady: onPlayerReady,
@@ -56,7 +56,7 @@ $(document).ready(function() {
   var titleFromOMDB = "The Matrix";
 
   //   When we've clicked the submit button
-  $("#searchButton").on("click", function() {
+  $("#searchButton").on("click", function () {
     console.log("called YouTube API");
 
     // Ensure that we have valid data. This will likely change as we move along. The
@@ -71,7 +71,10 @@ $(document).ready(function() {
         "%20trailer&safeSearch=moderate&type=video&videoDefinition=any&videoType=any&key=" +
         "AIzaSyAdbJz-qr5qNeHZKT9uV-ulkjw6J8WdppY";
 
-      $.ajax({ url: queryURL, method: "GET" }).then(function(response) {
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function (response) {
         console.log(response.items[0].id.videoId);
 
         onYouTubeIframeAPIReady(response.items[0].id.videoId);
