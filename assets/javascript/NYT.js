@@ -10,14 +10,14 @@ function getNYT(titleFromOMDB, movieReleaseDate) {
     movieReleaseDate[movieReleaseDate.length - 3] +
     movieReleaseDate[movieReleaseDate.length - 2] +
     movieReleaseDate[movieReleaseDate.length - 1];
-  console.log(movieReleaseYear);
+  // console.log(movieReleaseYear);
   var q = titleFromOMDB + " movie review";
   // Convert the year that the movie was released into the format the the API needs. Generate an end date of one year after the film
   // released, otherwise we will get more recent articles that have less to do with what we want.
   movieReleaseYear += "0101";
   var endDate = parseInt(movieReleaseYear) + 10000;
-  console.log(movieReleaseYear);
-  console.log(endDate);
+  // console.log(movieReleaseYear);
+  // console.log(endDate);
 
   // My API Key that I requested from NYT
   var key = "4SoUF5T27Qi9phhxLbs9GvcGOxEXASCO";
@@ -37,7 +37,7 @@ function getNYT(titleFromOMDB, movieReleaseDate) {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-    console.log(response.response.docs[0]);
+    // console.log(response.response.docs[0]);
     var articleURL = response.response.docs[0].web_url;
     var newAnchor = $("<a>");
     newAnchor.attr("href", articleURL);
@@ -50,7 +50,7 @@ function getNYT(titleFromOMDB, movieReleaseDate) {
       response.response.docs[0].lead_paragraph +
       "</p>"
     );
-    console.log(response.response.docs[0].headline.main);
+    // console.log(response.response.docs[0].headline.main);
     $("#movieNYReview").empty();
     $("#movieNYReview").append(newAnchor);
   });
