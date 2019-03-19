@@ -40,7 +40,8 @@ body {
     background-color: #d67925;
     width: 200px;
     height: 60px;
-    box-shadow: 4px 4px 6px 1px #00000045
+    border-radius: 8px;
+    box-shadow: 4px 4px 6px 1px #00000045;
 }
 
 section {
