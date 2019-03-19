@@ -62,7 +62,7 @@
 // Irfan's call to the OMDB API. This variable must be removed when the code is
 // ready to integrate.
 
-function getTrailer(titleFromOMDB) {
+function getTrailer(titleFromOMDB, releaseDate) {
   // var title = "The Matrix";
   // var titleFromOMDB = "The Matrix";
 
@@ -74,13 +74,22 @@ function getTrailer(titleFromOMDB) {
   // "titleFromOMDB" variable may just be a simple error variable.
   if (titleFromOMDB != undefined) {
     // console.log("valid title");
+    var titleArray = titleFromOMDB.split(" ");
+    var joinedTitle = titleArray.join("%20");
 
     // define our query url
     var queryURL =
       "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" +
-      titleFromOMDB +
+      joinedTitle +
+      " " +
+      releaseDate[releaseDate.length - 4] +
+      releaseDate[releaseDate.length - 3] +
+      releaseDate[releaseDate.length - 2] +
+      releaseDate[releaseDate.length - 1] +
       "%20trailer&safeSearch=moderate&type=video&videoDefinition=any&videoType=any&key=" +
-      "AIzaSyAdbJz-qr5qNeHZKT9uV-ulkjw6J8WdppY";
+      "AIzaSyCf7UWyalYhvAIKZeoPhI6XCx4e9oa8N_o";
+
+    console.log(queryURL);
 
     $.ajax({ url: queryURL, method: "GET" }).then(function(response) {
       console.log(response.items[0]);
