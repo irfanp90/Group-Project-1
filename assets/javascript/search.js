@@ -1,16 +1,12 @@
-// if submit button is pressed and search is empty alert modal telling the user to enter something at least
-// return cursor to searchText
-
-// predictive functionality from set list
-// would look at all available names on omdb in the wild
-
-// posters of recently viewed?
-//
+// user types their search
+// search provides prediction from array of movies
+// submit button is pressed and searchInput created for OMDB API call
+// if search is empty alert modal telling the user to enter something
 
 $(document).ready(function() {
   // check the submit button is working and show search value
   $("#searchButton").on("click", function() {
-    console.log("we got clicked!!");
+    // console.log("search button clicked");
     // console.log("click produces: ", $("#searchText").val());
     event.preventDefault();
     // call the validateSearch function
@@ -86,7 +82,7 @@ $(document).ready(function() {
     titles = [];
   }
 
-  var searchDebounced = _.debounce(predictiveSearch, 300);
+  var searchDebounced = _.debounce(predictiveSearch, 600);
 
   $("#searchText").keyup(function(event) {
     if (event.keyCode >= 65 && event.keyCode <= 90) {
