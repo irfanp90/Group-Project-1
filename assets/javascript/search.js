@@ -27,7 +27,7 @@ $(document).ready(function() {
     }
   });
 
-  var specialCharacters = "~`#$%^&*+=-[]\\';/{}|\":<>";
+  var specialCharacters = "~`#$%^*+=[]\\'/{}|\"<>";
 
   function validateSearch() {
     // console.log("this is our movie search val!!", $("#searchText").val());
@@ -59,34 +59,6 @@ $(document).ready(function() {
     movieData(searchInput);
     return searchInput;
   }
-
-  // var movies = [
-  //   "Alien",
-  //   "Boiler Room",
-  //   "Cars",
-  //   "Donnie Darko",
-  //   "Fight Club",
-  //   "Ghost",
-  //   "Harry Potter",
-  //   "Inception",
-  //   "Jurassic Park",
-  //   "Kill Bill",
-  //   "Labyrinth",
-  //   "Mad Max",
-  //   "National Lampoons",
-  //   "Office Space",
-  //   "Pulp Fiction",
-  //   "Trainspotting",
-  //   "Robin Hood",
-  //   "Superman",
-  //   "Terminator 2",
-  //   "Up",
-  //   "V for Vendetta",
-  //   "Wall Street",
-  //   "X-Men",
-  //   "Young Frankenstein",
-  //   "Zero Dark Thirty"
-  // ];
 
   console.log(movies);
 
