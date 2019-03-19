@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900|Montserrat');
+
 body,
 html {
     height: 100%;
@@ -7,8 +9,17 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 h1 {
     font-size: 3.5rem;
+    font-family: 'Merriweather',
+        Georgia,
+        'Times New Roman',
+        Times,
+        serif;
 }
 
 label {
@@ -29,7 +40,7 @@ body {
     background-color: #d67925;
     width: 200px;
     height: 60px;
-
+    box-shadow: 4px 4px 6px 1px #00000045
 }
 
 section {
@@ -38,6 +49,7 @@ section {
     margin-bottom: 8%;
     border-radius: 2px;
     z-index: 2;
+    box-shadow: 4px 4px 15px 3px #03100bf7;
 }
 
 .modal-close {
@@ -59,6 +71,7 @@ section:last-child {
 
 #movieTitle {
     font-size: 2.5rem;
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
     line-height: 2.5rem;
     margin-bottom: 1.5%;
 }
@@ -68,6 +81,14 @@ section:last-child {
 #movieActors {
     font-size: 1.25rem;
     line-height: 2rem;
+}
+
+#movieNYReview h3 {
+    font-family: 'Merriweather',
+        Georgia,
+        'Times New Roman',
+        Times,
+        serif;
 }
 
 #movieNYReview h3,
@@ -83,6 +104,7 @@ section:last-child {
 #recommend {
     font-weight: bold;
     margin: 10px;
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
 }
 
 #recommend p {
