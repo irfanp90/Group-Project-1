@@ -1040,7 +1040,7 @@ var movies = [
   "Wonder Wheel",
   "I, Tonya",
   "Just Getting Started",
-  "Star Wars: The Last Jedi",
+  "Star Wars: Episode VIII - The Last Jedi",
   "Ferdinand",
   "Beyond Skyline",
   "Jumanji: Welcome to the Jungle",

@@ -86,7 +86,7 @@ $(document).ready(function() {
     titles = [];
   }
 
-  var searchDebounced = _.debounce(predictiveSearch, 700);
+  var searchDebounced = _.debounce(predictiveSearch, 300);
 
   $("#searchText").keyup(function(event) {
     if (event.keyCode >= 65 && event.keyCode <= 90) {
