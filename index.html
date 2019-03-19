@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
@@ -28,7 +28,8 @@
     <div class="row">
       <div class=" col l6 s12">
         <label for="movie search" class="label">Search a Movie</label>
-        <input id="searchText" type="text" />
+        <input id="searchText" type="text" list="datalist"/>
+        <datalist id="datalist"></datalist></input>
       </div>
       <div class="col l6 s12">
         <button class="waves-effect waves-light btn modal-trigger animated bounceInDown" id="searchButton" type="submit">
@@ -114,6 +115,8 @@
 
 
   <script src="./assets/javascript/youtubeAPI.js"></script>
+  <script src="./assets/movies.js"></script>
+  <script src= "https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
   <script src="./assets/javascript/search.js"></script>
   <script src="./assets/javascript/NYT.js"></script>
   <Script src="./assets/javascript/omdbAPI.js"></Script>

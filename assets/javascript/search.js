@@ -27,7 +27,7 @@ $(document).ready(function() {
     }
   });
 
-  var specialCharacters = "~`!#$%^&*+=-[]\\';,/{}|\":<>?";
+  var specialCharacters = "~`#$%^&*+=-[]\\';/{}|\":<>";
 
   function validateSearch() {
     // console.log("this is our movie search val!!", $("#searchText").val());
@@ -59,4 +59,67 @@ $(document).ready(function() {
     movieData(searchInput);
     return searchInput;
   }
+
+  // var movies = [
+  //   "Alien",
+  //   "Boiler Room",
+  //   "Cars",
+  //   "Donnie Darko",
+  //   "Fight Club",
+  //   "Ghost",
+  //   "Harry Potter",
+  //   "Inception",
+  //   "Jurassic Park",
+  //   "Kill Bill",
+  //   "Labyrinth",
+  //   "Mad Max",
+  //   "National Lampoons",
+  //   "Office Space",
+  //   "Pulp Fiction",
+  //   "Trainspotting",
+  //   "Robin Hood",
+  //   "Superman",
+  //   "Terminator 2",
+  //   "Up",
+  //   "V for Vendetta",
+  //   "Wall Street",
+  //   "X-Men",
+  //   "Young Frankenstein",
+  //   "Zero Dark Thirty"
+  // ];
+
+  console.log(movies);
+
+  function predictiveSearch() {
+    console.log("search");
+
+    var titles = [];
+    $("#datalist").empty();
+    for (var i = 0; i < movies.length; i++) {
+      if (
+        movies[i].toLowerCase().includes(
+          $("#searchText")
+            .val()
+            .toLowerCase()
+        )
+      ) {
+        titles.push(movies[i]);
+      }
+    }
+    for (var j = 0; j < titles.length; j++) {
+      var option = $("<option></option>").attr("value", titles[j]);
+
+      $("#datalist").append(option);
+    }
+    titles = [];
+  }
+
+  var searchDebounced = _.debounce(predictiveSearch, 700);
+
+  $("#searchText").keyup(function(event) {
+    if (event.keyCode >= 65 && event.keyCode <= 90) {
+      console.log(event.keyCode);
+      searchDebounced();
+    }
+  });
 });
