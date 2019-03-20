@@ -25,6 +25,7 @@ function addLikeFunction(){
         goodCounter +=1;
     $("#goodcounter").text(goodCounter);
     database.ref(movieTitle).push("Good Count:" + goodCounter);
+    
     }
 
 document.getElementById("bad").addEventListener("click", addBadFunction);
@@ -38,10 +39,9 @@ document.getElementById("searchButton").addEventListener("click", reset);
 function reset(){
     $("#goodcounter").text(goodCounter);
     $("#badcounter").text(badCounter);
-    goodCounter = 0;
-    badCounter = 0;
-    database.ref(movieTitle).set("Good Count:" + goodCounter);
-    database.ref(movieTitle).set("Bad Count:" + badCounter);
+    
+    goodCounter =0;
+    badCounter =0;
 
 }
     
