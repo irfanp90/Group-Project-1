@@ -108,7 +108,11 @@ section:last-child {
 #recommend {
     font-weight: bold;
     margin: 10px;
+<<<<<<< HEAD
     font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+=======
+    float: right;
+>>>>>>> Kyle
 }
 
 #recommend p {
@@ -118,14 +122,14 @@ section:last-child {
 #movieQuestion {
     border: solid;
     border-width: 2px;
-    width: 60px;
+    width: 100px;
     align-content: center;
     margin: 10px;
-    float: left;
 }
 
 .rate {
-    width: 50px;
+    width: 60px;
     height: 50px;
     padding: 10px;
+    margin: 10px;
 }
