@@ -70,12 +70,12 @@
         <div id="recommend">
           <p>Would you recommend this Movie?</p>
           <div id="movieQuestion">
-            <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-            <img class="rate" id="good" src="./assets/Images/good.png" alt="good">
-            <p id="thumbsupcount"></p>
-            <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-            <img class="rate" id="bad" src="./assets/Images/bad.png" alt="bad">
-            <p id="thumbsdowncount"></p>
+            <button class="rate" id="good" name="rate" value="good"> Good </button>
+            <p id="goodcounter"></p>
+            <br>
+            <button class="rate" id="bad" name="rate" value="bad"> Bad </button>
+            <p id="badcounter"></p>
+            <br>
           </div>
         </div>
       </div>
@@ -113,11 +113,11 @@
   </section>
 
 
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
   <script src="./assets/javascript/youtubeAPI.js"></script>
   <script src="./assets/javascript/search.js"></script>
   <script src="./assets/javascript/NYT.js"></script>
   <Script src="./assets/javascript/omdbAPI.js"></Script>
-  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
   <script src="./assets/javascript/app.js"></script>
 
 
