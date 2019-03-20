@@ -51,7 +51,7 @@ function movieData(movie) {
 
     $("#movieInfo").append(pOne, pTwo, pThree, pFive, pSix);
     // console.log("Should now call youtube");
-    // getTrailer(response.Title, response.Released);
+    getTrailer(response.Title, response.Released);
     getNYT(response.Title, response.Released);
   });
 

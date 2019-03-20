@@ -44,22 +44,22 @@ $(document).ready(function() {
     for (var i = 0; i < searchInput.length; i++) {
       if (specialCharacters.indexOf(searchInput.charAt(i)) !== -1) {
         //alert("Please enter a Movie Title with no special characters"); // alert to be changed to modal
-        console.log("This is working");
+        // console.log("This is working");
         $("#searchButton").attr("href", "#modal2");
         $(".modal").modal();
         $("#modal2").modal("open");
         return false;
       }
     }
-    console.log("submitting for URLQuery: ", searchInput); //   fetchQueryURL(search);
+    // console.log("submitting for URLQuery: ", searchInput); //   fetchQueryURL(search);
     movieData(searchInput);
     return searchInput;
   }
 
-  console.log(movies);
+  // console.log(movies);
 
   function predictiveSearch() {
-    console.log("search");
+    // console.log("search");
 
     var titles = [];
     $("#datalist").empty();
@@ -86,7 +86,7 @@ $(document).ready(function() {
 
   $("#searchText").keyup(function(event) {
     if (event.keyCode >= 65 && event.keyCode <= 90) {
-      console.log(event.keyCode);
+      // console.log(event.keyCode);
       searchDebounced();
     }
   });
