@@ -118,14 +118,15 @@ section:last-child {
 #movieQuestion {
     border: solid;
     border-width: 2px;
-    width: 60px;
+    border-radius: 2px;
+    width: 100px;
     align-content: center;
     margin: 10px;
-    float: left;
 }
 
 .rate {
-    width: 50px;
+    width: 60px;
     height: 50px;
     padding: 10px;
+    margin: 10px;
 }

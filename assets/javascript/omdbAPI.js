@@ -53,7 +53,10 @@ function movieData(movie) {
     // console.log("Should now call youtube");
     getTrailer(response.Title, response.Released);
     getNYT(response.Title, response.Released);
+
+    rating(response.Title);
   });
+
 
   // $("#searchButton").on("click", movieData);
   // $("#movieInfo").empty();
