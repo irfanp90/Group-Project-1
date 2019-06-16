@@ -1,4 +1,4 @@
-# Group-Project-1
+Movies Galore!
 
 Group Project 1. Movies stuff
 
