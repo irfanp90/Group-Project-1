@@ -1,6 +1,5 @@
 Movies Galore!
 
-Group Project 1. Movies stuff
 
 Our movies app searches for a user-defined movie title using OMDB. If the app is able to locate a movie, it will pull that movie up and provide the user with additional information. The user sees:
 
